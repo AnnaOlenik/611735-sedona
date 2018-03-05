@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <a class="main-header-logo">
+        <img src="img/index-logo.svg" width="60" height="40" alt="Логотип cедона">
+      </a>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="gallery.html">Фото и видео</a></li>
+          <li><a href="map.html">Карта</a></li>
+          <li><a href="Hotels.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h1 class="visually-hidden">Поиск жилья</h1>
+      <section class="search-menu">
+        <p class="infrastructure-search-menu">
+          <h2>инфраструктура</h2>
+            <input type="checkbox" name="infrastructure.subscribe.1" id="infrastructure.subscribe-field.1" checked>
+            <label for="infrastructure.subscribe-field.1">бассейн</label>
+            <input type="checkbox" name="infrastructure.subscribe.2" id="infrastructure.subscribe-field.2">
+            <label for="infrastructure.subscribe-field.2">парковка</label>
+            <input type="checkbox" name="infrastructure.subscribe3" id="infrastructure.subscribe-field.3">
+            <label for="infrastructure.subscribe-field.3">wi-fi</label>
+        </p>
+        <p class="accommodation-search-menu">
+          <h2>тип жилья</h2>
+          <input type="checkbox" name="accommodation.subscribe.1" id="accommodation.hotel" checked>
+          <label for="accommodation.subscribe.1">гостиница</label>
+          <input type="checkbox" name="accommodation.subscribe.2" id="accommodation.motel" checked>
+          <label for="accommodation.subscribe.2">мотель</label>
+          <input type="checkbox" name="accommodation.subscribe3" id="accommodation.apartement" checked>
+          <label for="accommodation.subscribe3">апартаменты</label>
+        </p>
+        <p class="prise-search-menu">
+          <h2>стоимость в сутки</h2>
+          <input type="range" min="0" max="4000" step="1" value="3000">
+          <input type="submit" value="показать">
+        </p>
+      </section>
+      <section class="search-result"
+        <h2>Найдено:</h2>
+          <div id="search-list">
+            <span class="sort" rel="prise">по цене</span>
+            <span class="sort" rel="accommodation">по типу</span>
+            <span class="sort" rel="rating">по рейтингу</span>
+            <ul class="result-list">
+              <li class="result-block">
+                <img src="#.png" alt="гостиница amara resort&spa">
+                <a href="#.html"><h3 class="name">amara resort&spa</h3></a>
+                <p class="accommodation" id="accommodation.motel">гостиница</p>
+                <p class="prise">от 4000</p>
+                <a href="#.html">подробнее</a>
+                <input type="submit" value="забронировать">
+                <img src="#.png" alt="рейтинг">
+                <span class="rating">рейтинг:8,5</span>
+              </li>
+              <li class="result-block">
+                <img src="#.png" alt="мотель desert quail inn">
+                <a href="#.html"><h3 class="name">desert quail inn</h3></a>
+                <p class="accommodation">мотель</p>
+                <p class="prise">от 3000</p>
+                <a href="#.html">подробнее</a>
+                <input type="submit" value="забронировать">
+                <img src="#.png" alt="рейтинг">
+                <span class="rating">рейтинг:8,9</span>
+              </li>
+              <li class="result-block">
+                <img src="#.png" alt="апартаменты villas at poco diablo">
+                <a href="#.html"><h3 class="name">villas at poco diablo</h3></a>
+                <p class="accommodation">апартаменты</p>
+                <p class="prise">от 2000</p>
+                <a href="#.html">подробнее</a>
+                <input type="submit" value="забронировать">
+                <img src="#.png" alt="рейтинг">
+                <span class="rating">рейтинг:9,2</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+      <p class="footer-contacts">
+        <a href="#.html">#Visitsedona</a>
+      </p>
+      <div class="footer-social"></div>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="html-academy.logo" alt="логотип HTMLакадемии">
+      </a>
+    </footer>
+  </body>
+</html>
