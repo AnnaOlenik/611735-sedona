@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Анна  Оленикова](https://up.htmlacademy.ru/htmlcss/20/user/611735).
-* Наставник: [Анна Лемина](https://htmlacademy.ru/profile/id83874).
+* Наставник: [Анна Лёмина](https://htmlacademy.ru/profile/id83874).
 
 ---
 
