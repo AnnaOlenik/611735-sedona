@@ -21,37 +21,43 @@
     <main>
       <h1 class="visually-hidden">Поиск жилья</h1>
       <section class="search-menu">
-
-        <p class="infrastructure-search-menu">
-          <h2>инфраструктура</h2>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="infrastructure-search-menu">
+            <legend>инфраструктура</legend>
             <input type="checkbox" name="infrastructure.subscribe.1" id="infrastructure.subscribe-field.1" checked>
             <label for="infrastructure.subscribe-field.1">бассейн</label>
             <input type="checkbox" name="infrastructure.subscribe.2" id="infrastructure.subscribe-field.2">
             <label for="infrastructure.subscribe-field.2">парковка</label>
             <input type="checkbox" name="infrastructure.subscribe3" id="infrastructure.subscribe-field.3">
             <label for="infrastructure.subscribe-field.3">wi-fi</label>
-        </p>
-        <p class="accommodation-search-menu">
-          <h2>тип жилья</h2>
+          </fieldset>
+          <fieldset class="accommodation-search-menu">
+            <legend>тип жилья</legend>
           <input type="checkbox" name="accommodation1" id="accommodation.hotel" checked>
           <label for="accommodation.hotel">гостиница</label>
           <input type="checkbox" name="accommodation2" id="accommodation.motel" checked>
           <label for="accommodation.motel">мотель</label>
           <input type="checkbox" name="accommodation3" id="accommodation.apartement" checked>
           <label for="accommodation.apartement">апартаменты</label>
-        </p>
-        <p class="prise-search-menu">
-          <h2>стоимость в сутки</h2>
-          <input type="range" min="0" max="4000" step="1" value="3000">
-          <input type="submit" value="показать">
-        </p>
-      </section>
+          </fieldset>
+          <fieldset class="price-menu">
+            <legend>стоимость в сутки (р)</legend>
+            <label class="price">от <input type="number" min="0" max="4000" name="min-price" value="0"></label>
+            <label class="price">до <input type="number"  min="0" max="4000" name="max-price" value="3000"></label>
+            <input type="range" min="0" max="4000" step="500" value="3000">
+          </fieldset>
+          <div class="btn-show"
+            <input type="submit" value="показать">
+          </div>
+      </form>
+
       <section class="search-result">
+        <h2 class="visually-hidden">Выборка<h2>
         <ul class="search-list">
           <li class="count">
             <p>Найдено 3</p>
           </li>
-          <li>
+          <li class="sort">
               <p>Сортировка:</p>
           </li>
           <li class="by-price">

@@ -78,8 +78,32 @@
         <h2>Заинтересовались?</h2>
         <img src="img/map.jpg" width="100%" height="475" alt="Карта проезда">
         <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button type="submit" class="search-button button">Поиск гостиницы в Седоне</button>
-          <!-- Здесь будет форма -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <h4>поиск гостиницы в седоне</h4>
+              <div class="search_form">
+                <label for="datein">Дата заезда</label>
+                <input type="text" id="datein" name="checkin" placeholder="24 апреля 2017">
+                <a class="button" href="calendar.html"><img srs="img/calenar_icon.svg"></a>
+              </div>
+              <div class="search_form">
+                <label for="dateout">Дата выезда</label>
+                <input type="text" id="dateout" name="checkout" placeholder="4 июля 2017">
+                <a class="button" href="calendar.html"><img srs="img/calenar_icon.svg"></a>
+              </div>
+              <div class="search_form">
+                <label for="adults">взрослые</label>
+                <input type="button" name="minus" value="-">
+                <input type="number" id="adults" name="adults" step="1" min="1" value="2">
+                <input type="button" name="plus" value="+">
+              </div>
+              <div class="search_form">
+                <label for="children">дети</label>
+                <input type="button" name="minus" value="-">
+                <input type="number" id="children" name="children" min="1" step="1" value="1">
+                <input type="button" name="plus" value="+">
+              </div>
+              <input type="submit" value="найти">
+          </form>
       </section>
     </main>
     <footer class="main-footer">
