@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
-  <body class="container">"
+  <body class="container" style="background-color:green;">"
     <header class="main-header">
       <a class="main-header-logo" href="index.html">>
         <img src="img/logo.svg"  alt="Логотип cедона">
       </a>
       <nav class="main-navigation"> <!-- display: flex-->
+        <span class="visually-hidden">навигация по сайту</span>
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="gallery.html">Фото и видео</a></li>
@@ -19,36 +20,101 @@
       </nav>
     </header>
     <main>
-      <h1 class="visually-hidden">Поиск жилья</h1>
       <section class="search-menu">
+      <h1 class="visually-hidden">Поиск жилья</h1>
         <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="infrastructure-search-menu">
+
+          <fieldset class="hotel-service">
+            <span class="visually-hidden">фильтр опций жилья</span>
             <legend>инфраструктура</legend>
-            <input type="checkbox" name="infrastructure.subscribe.1" id="infrastructure.subscribe-field.1" checked>
-            <label for="infrastructure.subscribe-field.1">бассейн</label>
-            <input type="checkbox" name="infrastructure.subscribe.2" id="infrastructure.subscribe-field.2">
-            <label for="infrastructure.subscribe-field.2">парковка</label>
-            <input type="checkbox" name="infrastructure.subscribe3" id="infrastructure.subscribe-field.3">
-            <label for="infrastructure.subscribe-field.3">wi-fi</label>
-          </fieldset>
-          <fieldset class="accommodation-search-menu">
+              <ul class="filter">
+
+                <li class="filter-option">
+                  <span class="visually-hidden">добавить в фильтр бассейн</span>
+                  <input class="input-hidden" type="checkbox" name="pool" id="pool-id" checked>
+                  <span class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="23">
+                    <image width="27" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAXCAQAAABQH/ylAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCAzgV530lAAAA7ElEQVQ4y43UsU3EMBSA4T8nROECHUVaJmACJGoqTtQwQZgAJqHKKmnYgBuAFaDhTiehnwJM4viS+L3GhT8/+0nPGGzduRxfXklMbAuI6pNY+2wlcsI9sOGV+ZBPajouueARUXXdl5/M2u1f3RerUtYj3XpWxlJUSwnL0JgFb0pQyoKd3z4soyELdqoJnEBDdve/IcIcNTnDJoHHkMdYCt+z6znFhjB/0wwbw2EjZtkQJt1bYhGmqIBh49sIJaxS4JyPbMJOOWQzB9XvcjU5mAdmYsUeuI6nzMQtsO8rl/4lqm3fktKfa2driOwHHd/3HNcVGQcAAAAASUVORK5CYII="/>
+                  </svg></span>
+                  <label for="pool-id">бассейн</label>
+
+                </li>
+                <li class="filter-option">
+                  <span class="visually-hidden">добавить в фильтр паркинг</span>
+                  <input class="input-hidden" type="checkbox" name="parking" id="parking-id">
+                  <span class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 23 23">
+                    <image width="23" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAQAAABJ5hrTAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCBDvDr7pYAAABdklEQVR42u3coW4CQRRG4bObCnC1gCbUtO9QxTugNlnLGxRbxXtUg6wiQSJbU4KG1oGj7taQ0J0laRczd5L/jLsh5IMMQd3NjEoDRjxyzy1+OvDOghfWlamdT99m5rmZ9c/aM7u0Y2zZnx2tDOGT2KZ/N/kNL2NrGlUaRmbQ541W7F9gg755YJMD06TY0GIKmQ34iC25orsbRrXhjideOca2nWoz5JluMB1hy+Dqb61nODs92wbKJbYPRkV05qVTBMp9ZsF/Pl0+Y9+OC3XYVQd57SVe7na1r3CQX/MuEQrvRTLwWoILLrjTBBdccKcJLrjgThNccMGdJrjggjtNcMEFd5rgggvuNMEFF9xpggsuuNMEF1xwpwkuuOBOE1xwwZ0muOCCO60Ob8cmXaxThx+CyTC28WKh6pDsAlPOIvgsXVYUdMhif8mnOhSsaitji2SX9HLWzGMrGjdnnfQi6oZxbEujxmxIfdk64fX25B4okKX6CIcfsq89f0Ht9CsAAAAASUVORK5CYII="/>
+                  </svg>
+                  </span>
+                  <label for="parking-id">парковка</label>
+                </li>
+
+                <li class="filter-option">
+                  <span class="visually-hidden">добавить в фильтр вайфай</span>
+                  <input class="input-hidden" type="checkbox" name="wifi" id="wifi-id">
+                  <span class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 23 23">
+                    <image width="23" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAQAAABJ5hrTAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCBDvDr7pYAAABdklEQVR42u3coW4CQRRG4bObCnC1gCbUtO9QxTugNlnLGxRbxXtUg6wiQSJbU4KG1oGj7taQ0J0laRczd5L/jLsh5IMMQd3NjEoDRjxyzy1+OvDOghfWlamdT99m5rmZ9c/aM7u0Y2zZnx2tDOGT2KZ/N/kNL2NrGlUaRmbQ541W7F9gg755YJMD06TY0GIKmQ34iC25orsbRrXhjideOca2nWoz5JluMB1hy+Dqb61nODs92wbKJbYPRkV05qVTBMp9ZsF/Pl0+Y9+OC3XYVQd57SVe7na1r3CQX/MuEQrvRTLwWoILLrjTBBdccKcJLrjgThNccMGdJrjggjtNcMEFd5rgggvuNMEFF9xpggsuuNMEF1xwpwkuuOBOE1xwwZ0muOCCO60Ob8cmXaxThx+CyTC28WKh6pDsAlPOIvgsXVYUdMhif8mnOhSsaitji2SX9HLWzGMrGjdnnfQi6oZxbEujxmxIfdk64fX25B4okKX6CIcfsq89f0Ht9CsAAAAASUVORK5CYII="/>
+                  </svg>
+                  </span>
+                  <label for="wifi-id">wi-fi</label>
+                </li>
+              </ul>
+            </fieldset>
+
+          <fieldset class="hotel-type">
             <legend>тип жилья</legend>
-          <input type="checkbox" name="accommodation1" id="accommodation.hotel" checked>
-          <label for="accommodation.hotel">гостиница</label>
-          <input type="checkbox" name="accommodation2" id="accommodation.motel" checked>
-          <label for="accommodation.motel">мотель</label>
-          <input type="checkbox" name="accommodation3" id="accommodation.apartement" checked>
-          <label for="accommodation.apartement">апартаменты</label>
-          </fieldset>
+            <span class="visually-hidden">фильтр типа жилья</span>
+              <ul class="filter">
+                <li class="filter-option">
+                  <span class="visually-hidden">добавить в фильтр гостиницы</span>
+                  <input class="input-hidden" type="checkbox" name="hotel" id="hotel-id" checked>
+                  <span class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="23">
+                  <image width="27" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAXCAQAAABQH/ylAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCAzgV530lAAAA7ElEQVQ4y43UsU3EMBSA4T8nROECHUVaJmACJGoqTtQwQZgAJqHKKmnYgBuAFaDhTiehnwJM4viS+L3GhT8/+0nPGGzduRxfXklMbAuI6pNY+2wlcsI9sOGV+ZBPajouueARUXXdl5/M2u1f3RerUtYj3XpWxlJUSwnL0JgFb0pQyoKd3z4soyELdqoJnEBDdve/IcIcNTnDJoHHkMdYCt+z6znFhjB/0wwbw2EjZtkQJt1bYhGmqIBh49sIJaxS4JyPbMJOOWQzB9XvcjU5mAdmYsUeuI6nzMQtsO8rl/4lqm3fktKfa2driOwHHd/3HNcVGQcAAAAASUVORK5CYII="/>
+                </svg></span>
+                  <label for="hotel-id">гостиница</label>
+                </li>
+
+                <li class="filter-option">
+                  <span class="visually-hidden">добавить в фильтр мотели</span>
+                  <input class="input-hidden" type="checkbox" name="motel" id="motel-id" checked>
+                  <span class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="23">
+                  <image width="27" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAXCAQAAABQH/ylAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCAzgV530lAAAA7ElEQVQ4y43UsU3EMBSA4T8nROECHUVaJmACJGoqTtQwQZgAJqHKKmnYgBuAFaDhTiehnwJM4viS+L3GhT8/+0nPGGzduRxfXklMbAuI6pNY+2wlcsI9sOGV+ZBPajouueARUXXdl5/M2u1f3RerUtYj3XpWxlJUSwnL0JgFb0pQyoKd3z4soyELdqoJnEBDdve/IcIcNTnDJoHHkMdYCt+z6znFhjB/0wwbw2EjZtkQJt1bYhGmqIBh49sIJaxS4JyPbMJOOWQzB9XvcjU5mAdmYsUeuI6nzMQtsO8rl/4lqm3fktKfa2driOwHHd/3HNcVGQcAAAAASUVORK5CYII="/>
+                  </svg></span>
+                  <label for="motel-id">мотель</label>
+                </li>
+
+                <li class="filter-option">
+                  <span class="visually-hidden">добавить в фильтр апартаменты</span>
+                  <input class="input-hidden" type="checkbox" name="apartement" id="apartement-id" checked>
+                  <span class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="23">
+                    <image width="27" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAXCAQAAABQH/ylAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCAzgV530lAAAA7ElEQVQ4y43UsU3EMBSA4T8nROECHUVaJmACJGoqTtQwQZgAJqHKKmnYgBuAFaDhTiehnwJM4viS+L3GhT8/+0nPGGzduRxfXklMbAuI6pNY+2wlcsI9sOGV+ZBPajouueARUXXdl5/M2u1f3RerUtYj3XpWxlJUSwnL0JgFb0pQyoKd3z4soyELdqoJnEBDdve/IcIcNTnDJoHHkMdYCt+z6znFhjB/0wwbw2EjZtkQJt1bYhGmqIBh49sIJaxS4JyPbMJOOWQzB9XvcjU5mAdmYsUeuI6nzMQtsO8rl/4lqm3fktKfa2driOwHHd/3HNcVGQcAAAAASUVORK5CYII="/>
+                  </svg></span>
+                  <label for="apartement-id">апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+
           <fieldset class="price-menu">
             <legend>стоимость в сутки (р)</legend>
-            <label class="price">от <input type="number" min="0" max="4000" name="min-price" value="0"></label>
-            <label class="price">до <input type="number"  min="0" max="4000" name="max-price" value="3000"></label>
-            <input type="range" min="0" max="4000" step="500" value="3000">
+            <span class="visually-hidden">фильтр цены</span>
+            <span class="visually-hidden">поле ввода минимальной цены в рублях</span>
+            <label class="price">от <input type="text" name="min-price" value="0"></label>
+            <span class="visually-hidden">поле ввода максимальной цены в рублях</span>
+            <label class="price">до <input type="text" name="max-price" value="3000"></label>
+            <div class="scale">
+              <div class="bar">
+                <div class="range-toogle">
+                  <div class="range-min"><span class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="22">
+                    <image width="20" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAQAAABqSHSNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCBRkP1Mr9AAABOElEQVQoz42QsUsCURzHPz7lSLpBMCGIgrYiGoyG/gwhbHAV/HdaXcPxJgkkAgXFwSE8rCEcQrGEuDvskpZO7dcgZndh52d6fN/nve/vPfhBdClIRSwREbGkIgXR+YvkxZEgjuT9kiYlWUVJtKW4WhMRKS1Lw8jPn+CEio7oihxJwkiSU2RCNYBMRCxSv5NnTCDNrl+0lV8DEw8PM3hjSq1VDCgcf5BGQyMd9BwmtdDPEZFJTY2b6xSPm6pdZRTqjdpV5fbtYphnF92+YlhveOX/NK9cbzCMGl8Xk561vxE9WKXdXM3us29RMN7P492nVG/ziHhwNvvy9no2yHYhBkAH6i3dPD1JnMWO2QKc6YPbumt/fPJCByCyOGzscYgW7OUxO5gvI8vUiLHDNgk0wMPllWF2utj9Bm8wJUSzID2cAAAAAElFTkSuQmCC"/>
+                  </svg></span></div>
+                  <div class="range-max"><span class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="22">
+                    <image width="20" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAQAAABqSHSNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCBRkP1Mr9AAABOElEQVQoz42QsUsCURzHPz7lSLpBMCGIgrYiGoyG/gwhbHAV/HdaXcPxJgkkAgXFwSE8rCEcQrGEuDvskpZO7dcgZndh52d6fN/nve/vPfhBdClIRSwREbGkIgXR+YvkxZEgjuT9kiYlWUVJtKW4WhMRKS1Lw8jPn+CEio7oihxJwkiSU2RCNYBMRCxSv5NnTCDNrl+0lV8DEw8PM3hjSq1VDCgcf5BGQyMd9BwmtdDPEZFJTY2b6xSPm6pdZRTqjdpV5fbtYphnF92+YlhveOX/NK9cbzCMGl8Xk561vxE9WKXdXM3us29RMN7P492nVG/ziHhwNvvy9no2yHYhBkAH6i3dPD1JnMWO2QKc6YPbumt/fPJCByCyOGzscYgW7OUxO5gvI8vUiLHDNgk0wMPllWF2utj9Bm8wJUSzID2cAAAAAElFTkSuQmCC"/>
+                  </svg></span></div>
+                </div>
+              </div>
+            </div>
+            <span class="visually-hidden">кнопка показа подходящих вариантов жилья</span>
+            <button type="submit" class="button submit-button">показать</button>
           </fieldset>
-          <div class="btn-show"
-            <input type="submit" value="показать">
-          </div>
       </form>
 
       <section class="search-result">
@@ -61,32 +127,45 @@
               <p>Сортировка:</p>
           </li>
           <li class="by-price">
+            <span class="visually-hidden">кнопка сортировки по цене в рублях</span>
               <a class="btn-sorting btn-sorting-active" href="#">По цене</a>
           </li>
           <li class="by-type">
+            <span class="visually-hidden">кнопка сортировки по типу</span>
               <a class="btn-sorting" href="#">По типу</a>
           </li>
           <li class="by-raiting">
+            <span class="visually-hidden">кнопка сортировки по рейтингу</span>
               <a class="btn-sorting" href="#">По рейтингу</a>
           </li>
           <li class="sort-result-btn">
-              <a class="sort-up" href="#"></a>
-              <a class="sort-down" href="#"></a>
+            <span class="visually-hidden">кнопка сортировки по возрастанию</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="10">
+              <image width="11" height="10" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAQAAADI+WwIAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCBhPELHAgAAAAfklEQVQI12XNIRKCYABE4Q9Gg4VmwuZoMVPkLHgGvYBGPYdnUcNPt2A0miwGAwaBYXQ37Zs3s2rfhjgcQ9yuWJuVQtGOqAblSCV1N89e6OyNFBPrnl2O3STgaZo9WnvbQBK7xi5nrgbd9dsiq2IcepChPVHInfwmj8LZ8g9fPoShIvvsadaKAAAAAElFTkSuQmCC"/>
+            </svg></span>
+            <a class=" visually-hidden sort-up" href="#"></a>
+
+            <span class="visually-hidden">кнопка сортировки по убыванию</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="50" viewBox="0 0 11 10">
+              <image width="11" height="10" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAyCAMAAADPyLPHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEWBs9L///+Bs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAACxE7srAAAAL3RSTlMAAMU7Oq2sJfv6kxXxFHp5CeTjYF8C0UZFurkv/i6gnxz3hoUP6w5tbAXb2lMBovNvN1EAAAABYktHRDCu3C3kAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4gMIAgYavfDIhAAAATdJREFUSMed1NtCgkAURuF/iEAJg4whM0zQNC2q93+7kJA4zGFv1v13u+D8TMnBzSTnArcTmCcAf8Zmc79yCNguEBd3FzJZuKgd7pkuEn8ufmCxZdw4PLJcIq5OpgyWytbhieFW4t/hmczWouteMiLLNj2HV6Lbir7LCxIr8oHDjuT2GLq3A4EdjiOHd4I7YezOH1b2eVY4lFZXQuW+bKtxoHTW1bgaZ1mNB50zrmbua51xNQH0zrCacGFwhtVEMDntapax0WlXk8DsNKtJpcVpVrOCzSlXs4bdKVaTbQhOsZotKG60miInudFq9qC5wWqqqdDcYDUnUF1vNZepEF1vNSXorrMaBwzXWY3Lcu1qPPBcs5pmKnTXrCYA19WruU6F4erVROC7ajXtVDiuWk2CKU5+S737BXwc/aiq0wREAAAAAElFTkSuQmCC"/>
+            </svg></span>
+            <a class=" visually-hidden sort-down" href="#"></a>
           </li>
         </ul>
         <ul class="hotels-list">
+          <span class="visually-hidden">Список отелей</span>
           <li class="hotels-item">
             <div class="hotel-image">
               <a href="img/amara.jpg">
                 <img src="img/amara.jpg" width="136" height="91" alt="гостиница amara resort&spa">
               </a>
             </div>
-            <div class="hotel-description">
-              <h3>amara resort&spa</h3>
-            </div>
-            <div class="info-wrapper">
-              <b class="accommodation-type">гостиница</b>
-              <b class="prise">от 4000</b>
+
+            <h3>amara resort&spa</h3>
+              <span class="visually-hidden">Гостиница amara resort&spa, цена за сутки от 4000 рублей</span>
+              <div class="info-wrapper">
+                <b class="accommodation-type">гостиница</b>
+                <b class="prise">от 4000</b>
             </div>
             <div class="button-wrapper">
               <a href="#.html">подробнее</a>
@@ -94,6 +173,7 @@
             </div>
             <div class="hotel-rating">
                 <div class="stars-wrapper">
+                    <span class="visually-hidden">рейтинг четыре звезды</span>
                     <span class="stars"></span>
                     <span class="stars"></span>
                     <span class="stars"></span>
@@ -108,9 +188,9 @@
                 <img src="img/desert.jpg" width="136" height="91" alt="мотель desert quail inn">
               </a>
             </div>
-            <div class="hotel-description">
-              <h3>desert quail inn</h3>
-            </div>
+
+            <h3>desert quail inn</h3>
+            <span class="visually-hidden">Мотель desert quail inn, цена за сутки от 3000 рублей</span>
             <div class="info-wrapper">
               <b class="accommodation-type">мотель</b>
               <b class="prise">от 3000</b>
@@ -121,11 +201,12 @@
             </div>
             <div class="hotel-rating">
                 <div class="stars-wrapper">
+                  <span class="visually-hidden">рейтинг три звезды</span>
                     <span class="stars"></span>
                     <span class="stars"></span>
                     <span class="stars"></span>
                   </div>
-                <span class="rating">Рейтинг: 8,9</span>
+                  <span class="rating">Рейтинг: 8,9</span>
             </div>
           </li>
           <li class="hotels-item">
@@ -134,9 +215,9 @@
                 <img src="img/diablo.jpg" width="136" height="91" alt="апартаменты villas at poco diablo">
               </a>
             </div>
-            <div class="hotel-description">
-              <h3>villas at poco diablo</h3>
-            </div>
+
+            <h3>villas at poco diablo</h3>
+            <span class="visually-hidden">апартаменты villas at poco diablo, цена за сутки от 2000 рублей</span>
             <div class="info-wrapper">
               <b class="accommodation-type">апартаменты</b>
               <b class="prise">от 2000</b>
@@ -147,6 +228,7 @@
             </div>
             <div class="hotel-rating">
                 <div class="stars-wrapper">
+                    <span class="visually-hidden">рейтинг две звезды</span>
                     <span class="stars"></span>
                     <span class="stars"></span>
                 </div>
@@ -158,20 +240,25 @@
     </main>
     <footer class="main-footer">
       <div class="footer-social">
+        <span class="visually-hidden">мы в инстаграме хештег визитседона #Visitsedona</span>
         <a class="sedona-visit" href="#.html">#Visitsedona</a>
         <ul class="social-link">
           <li>
+            <span class="visually-hidden">мы в твиттере</span>
             <a class="social-button" href="#"></a>
           </li>
           <li>
+            <span class="visually-hidden">мы в фейсбуке</span>
             <a class="social-button" href="#"></a>
           </li>
           <li>
+            <span class="visually-hidden">мы в ютубе</span>
             <a class="social-button" href="#"></a>
           </li>
         </ul>
         <p class="footer-copyright">
           <b>Website by</b>
+          <span class="visually-hidden">ссылка на сайт htmlакадемии</span>
           <a href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo_site.png" alt="логотип HTMLакадемии">
           </a>
@@ -179,4 +266,4 @@
       </div>
     </footer>
   </body>
-</html>
+  </html>

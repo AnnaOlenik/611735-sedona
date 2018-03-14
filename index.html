@@ -10,6 +10,7 @@
         <img src="img/logo.svg" alt="Логотип cедона">
       </a>
       <nav class="main-navigation"> <!-- display: flex-->
+        <span class="visually-hidden">навигация по сайту</span>
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="gallery.html">Фото и видео</a></li>
@@ -26,7 +27,7 @@
       </div>
 
       <section class="city-info">
-        <h1> СЕДОНА <!-- дефис-->  НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО</h1>
+        <h1> СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО</h1>
         <p>рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
       </section>
       <section class="reasons-1">
@@ -79,49 +80,72 @@
         <img src="img/map.jpg" width="100%" height="475" alt="Карта проезда">
         <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <form action="https://echo.htmlacademy.ru" method="get">
+          <span class="visually-hidden">выбор даты заезда</span>
           <h4>поиск гостиницы в седоне</h4>
               <div class="search_form">
+                <span class="visually-hidden">поле выбора даты заезда</span>
                 <label for="datein">Дата заезда</label>
                 <input type="text" id="datein" name="checkin" placeholder="24 апреля 2017">
-                <a class="button" href="calendar.html"><img srs="img/calenar_icon.svg"></a>
+                <span class="visually-hidden">кнопка открытия календаря</span>
+                <span class="calendar"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+                  <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
+                  <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+                </svg> <span>
               </div>
               <div class="search_form">
                 <label for="dateout">Дата выезда</label>
+                <span class="visually-hidden">поле выбора даты выезда</span>
                 <input type="text" id="dateout" name="checkout" placeholder="4 июля 2017">
-                <a class="button" href="calendar.html"><img srs="img/calenar_icon.svg"></a>
+                <span class="visually-hidden">кнопка открытия календаря</span>
+                <span class="calendar"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+                  <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
+                  <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+                </svg> <span>
               </div>
               <div class="search_form">
+                <span class="visually-hidden">поле выбора количества взрослых</span>
                 <label for="adults">взрослые</label>
-                <input type="button" name="minus" value="-">
-                <input type="number" id="adults" name="adults" step="1" min="1" value="2">
-                <input type="button" name="plus" value="+">
+                <span class="visually-hidden">кнопка уменьшения количества взрослых</span>
+                <button class="minus" type="button">-<button>
+                <input type="text" id="adults" name="adults" value="2">
+                <span class="visually-hidden">кнопка увеличения количества взрослых</span>
+                <button class="plus" type="button">+<button>
               </div>
               <div class="search_form">
+                <span class="visually-hidden">поле выбора количества детей</span>
                 <label for="children">дети</label>
-                <input type="button" name="minus" value="-">
-                <input type="number" id="children" name="children" min="1" step="1" value="1">
-                <input type="button" name="plus" value="+">
+                <span class="visually-hidden">кнопка уменьшения количества детей</span>
+                <button class="minus" type="button">-<button>
+                <input type="text" id="children" name="children" value="1">
+                <span class="visually-hidden">кнопка увеличения количества детей</span>
+                <button class="plus" type="button">+<button>
               </div>
-              <input type="submit" value="найти">
+              <span class="visually-hidden">кнопка поиска отелей</span>
+              <button type="submit" class="button submit-button">Найти</button>
           </form>
       </section>
     </main>
     <footer class="main-footer">
       <div class="footer-social">
+        <span class="visually-hidden">мы в инстаграме хештег визитседона #Visitsedona</span>
         <a class="sedona-visit" href="#.html">#Visitsedona</a>
         <ul class="social-link">
           <li>
+            <span class="visually-hidden">мы в твиттере</span>
             <a class="social-button" href="#"></a>
           </li>
           <li>
+            <span class="visually-hidden">мы в фейсбуке</span>
             <a class="social-button" href="#"></a>
           </li>
           <li>
+            <span class="visually-hidden">мы в ютубе</span>
             <a class="social-button" href="#"></a>
           </li>
         </ul>
         <p class="footer-copyright">
           <b>Website by</b>
+          <span class="visually-hidden">ссылка на сайт htmlакадемии</span>
           <a href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo_site.png" alt="логотип HTMLакадемии">
           </a>
