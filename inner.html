@@ -20,21 +20,21 @@
       <nav class="main-navigation"> <!-- display: flex-->
         <span class="visually-hidden">навигация по сайту</span>
         <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="gallery.html">Фото и видео</a></li>
-          <li><a href="map.html">Карта</a></li>
-          <li><a href="Hotels.html">Гостиницы</a></li>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта</a></li>
+          <li><a href="#">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="search-menu">
       <h1 class="visually-hidden">Поиск жилья</h1>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="hotel-service">
             <span class="visually-hidden">фильтр опций жилья</span>
             <legend>инфраструктура</legend>
-              <ul class="filter">
+              <ul>
                 <li class="filter-option">
                   <input class="input-hidden" type="checkbox" name="pool" id="pool-id" checked>
                   <label for="pool-id">бассейн</label>
@@ -71,10 +71,8 @@
           <fieldset class="price-menu">
             <legend>стоимость в сутки (р)</legend>
             <span class="visually-hidden">фильтр цены</span>
-            <div class="price-border">
-              <span class="visually-hidden">поле ввода минимальной цены в рублях</span>
+            <div class="price-controls">
               <label class="price">от <input type="text" name="min-price" value="0"></label>
-              <span class="visually-hidden">поле ввода максимальной цены в рублях</span>
               <label class="price">до <input type="text" name="max-price" value="3000"></label>
             </div>
 
@@ -91,7 +89,7 @@
             </div>
 
             <span class="visually-hidden">кнопка показа подходящих вариантов жилья</span>
-            <button type="submit" class="button submit-button">показать</button>
+            <button type="submit" class="button search-hotels-button">показать</button>
           </fieldset>
       </form>
       </section>
@@ -114,14 +112,12 @@
               <a class="btn-sorting" href="#">По рейтингу</a>
           </li>
           <li class="sort-result-btn">
-            <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="10">
-              <image width="11" height="10" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAQAAADI+WwIAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCBhPELHAgAAAAfklEQVQI12XNIRKCYABE4Q9Gg4VmwuZoMVPkLHgGvYBGPYdnUcNPt2A0miwGAwaBYXQ37Zs3s2rfhjgcQ9yuWJuVQtGOqAblSCV1N89e6OyNFBPrnl2O3STgaZo9WnvbQBK7xi5nrgbd9dsiq2IcepChPVHInfwmj8LZ8g9fPoShIvvsadaKAAAAAElFTkSuQmCC"/>
-            </svg></span>
-            <a class=" visually-hidden sort-up" href="#"></a>
-
-
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg></span>
-            <a class=" visually-hidden sort-down" href="#"></a>
+            <span class="visually-hidden">кнопка сортировки по возрастанию</span>
+            <a class="sort-up" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="10">
+                <image width="11" height="10" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAQAAADI+WwIAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwgCBhPELHAgAAAAfklEQVQI12XNIRKCYABE4Q9Gg4VmwuZoMVPkLHgGvYBGPYdnUcNPt2A0miwGAwaBYXQ37Zs3s2rfhjgcQ9yuWJuVQtGOqAblSCV1N89e6OyNFBPrnl2O3STgaZo9WnvbQBK7xi5nrgbd9dsiq2IcepChPVHInfwmj8LZ8g9fPoShIvvsadaKAAAAAElFTkSuQmCC"/>
+                </svg></a>
+            <span class="visually-hidden">кнопка сортировки по убыванию</span>
+            <a class="sort-down" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg></a>
           </li>
         </ul>
         <ul class="hotels-list">
@@ -133,15 +129,15 @@
               </a>
             </div>
 
-              <h3 tabindex="1">amara resort&spa</h3>
+              <h3> amara resort&spa</h3>
               <span class="visually-hidden">Гостиница amara resort&spa, цена за сутки от 4000 рублей</span>
               <div class="info-wrapper">
                 <b class="accommodation-type">гостиница</b>
                 <b class="prise">от 4000</b>
             </div>
             <div class="button-wrapper">
-              <a href="#.html">подробнее</a>
-              <a href="#.html">забронировать</a>
+              <a class="button-info" href="#">подробнее</a>
+              <a class="button-buy" href="#">забронировать</a>
             </div>
             <div class="hotel-rating ">
                 <div class="stars-wrapper amara">
@@ -169,15 +165,15 @@
               </a>
             </div>
 
-            <h3 tabindex="1">desert quail inn</h3>
+            <h3>desert quail inn</h3>
             <span class="visually-hidden">Мотель desert quail inn, цена за сутки от 3000 рублей</span>
             <div class="info-wrapper">
               <b class="accommodation-type">мотель</b>
               <b class="prise">от 3000</b>
             </div>
             <div class="button-wrapper">
-              <a href="#.html">подробнее</a>
-              <a href="#.html">забронировать</a>
+              <a class="button-info" href="#">подробнее</a>
+              <a class="button-buy" href="#">забронировать</a>
             </div>
             <div class="hotel-rating">
                 <div class="stars-wrapper desert">
@@ -202,15 +198,15 @@
               </a>
             </div>
 
-            <h3 tabindex="1">villas at poco diablo</h3>
+            <h3>villas at poco diablo</h3>
             <span class="visually-hidden">апартаменты villas at poco diablo, цена за сутки от 2000 рублей</span>
             <div class="info-wrapper">
               <b class="accommodation-type">апартаменты</b>
               <b class="prise">от 2000</b>
             </div>
             <div class="button-wrapper">
-              <a href="#.html">подробнее</a>
-              <a href="#.html">забронировать</a>
+              <a class="button-info" href=href="#">подробнее</a>
+              <a class="button-buy" href=href="#">забронировать</a>
             </div>
             <div class="hotel-rating">
                 <div class="stars-wrapper diablo">
@@ -231,7 +227,7 @@
     <footer class="main-footer">
       <div class="footer-social">
         <span class="visually-hidden">мы в инстаграме хештег визитседона #Visitsedona</span>
-        <a class="sedona-visit" href="#.html">#Visitsedona</a>
+        <a class="sedona-visit" href="#">#Visitsedona</a>
         <ul class="social-link">
           <li>
             <span class="visually-hidden">мы в твиттере</span>
