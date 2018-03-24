@@ -22,7 +22,7 @@
         <ul class="site-navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта</a></li>
+          <li><a href="#">Карта штата</a></li>
           <li><a href="#">Гостиницы</a></li>
         </ul>
       </nav>
@@ -32,9 +32,9 @@
       <h1 class="visually-hidden">Поиск жилья</h1>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="hotel-service">
-            <span class="visually-hidden">фильтр опций жилья</span>
             <legend>инфраструктура</legend>
-              <ul>
+            <span class="visually-hidden">фильтр опций жилья</span>
+              <ul class="filter-ul">
                 <li class="filter-option">
                   <input class="input-hidden" type="checkbox" name="pool" id="pool-id" checked>
                   <label for="pool-id">бассейн</label>
@@ -52,7 +52,7 @@
           <fieldset class="hotel-type">
             <legend>тип жилья</legend>
             <span class="visually-hidden">фильтр типа жилья</span>
-              <ul class="filter">
+              <ul class="filter-ul">
                 <li class="filter-option">
                   <input class="input-hidden" type="checkbox" name="hotel" id="hotel-id" checked>
                   <label for="hotel-id">гостиница</label>
@@ -94,7 +94,7 @@
       </form>
       </section>
       <section class="search-result">
-        <h2 class="visually-hidden">Выборка<h2>
+        <h2 class="visually-hidden">Выборка</h2>
         <ul class="search-list">
           <li class="count">
             <p>Найдено: 3</p>
@@ -120,25 +120,28 @@
             <a class="sort-down" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg></a>
           </li>
         </ul>
+        <span class="visually-hidden">Список отелей</span>
         <ul class="hotels-list">
-          <span class="visually-hidden">Список отелей</span>
           <li class="hotels-item">
             <div class="hotel-image">
               <a href="img/amara.jpg">
                 <img src="img/amara.jpg" width="136" height="91" alt="гостиница amara resort&spa">
               </a>
             </div>
-
+              <div class="hotel-info">
               <h3> amara resort&spa</h3>
               <span class="visually-hidden">Гостиница amara resort&spa, цена за сутки от 4000 рублей</span>
               <div class="info-wrapper">
                 <b class="accommodation-type">гостиница</b>
                 <b class="prise">от 4000</b>
             </div>
+
+
             <div class="button-wrapper">
               <a class="button-info" href="#">подробнее</a>
               <a class="button-buy" href="#">забронировать</a>
             </div>
+              </div>
             <div class="hotel-rating ">
                 <div class="stars-wrapper amara">
                     <span class="visually-hidden">рейтинг четыре звезды</span>
@@ -156,17 +159,19 @@
                 <img src="img/desert.jpg" width="136" height="91" alt="мотель desert quail inn">
               </a>
             </div>
-
+            <div class="hotel-info">
             <h3>desert quail inn</h3>
             <span class="visually-hidden">Мотель desert quail inn, цена за сутки от 3000 рублей</span>
             <div class="info-wrapper">
               <b class="accommodation-type">мотель</b>
               <b class="prise">от 3000</b>
             </div>
+
             <div class="button-wrapper">
               <a class="button-info" href="#">подробнее</a>
               <a class="button-buy" href="#">забронировать</a>
             </div>
+              </div>
             <div class="hotel-rating">
                 <div class="stars-wrapper desert">
                   <span class="visually-hidden">рейтинг три звезды</span>
@@ -183,17 +188,19 @@
                 <img src="img/diablo.jpg" width="136" height="91" alt="апартаменты villas at poco diablo">
               </a>
             </div>
-
+            <div class="hotel-info">
             <h3>villas at poco diablo</h3>
             <span class="visually-hidden">апартаменты villas at poco diablo, цена за сутки от 2000 рублей</span>
             <div class="info-wrapper">
               <b class="accommodation-type">апартаменты</b>
               <b class="prise">от 2000</b>
             </div>
+
             <div class="button-wrapper">
-              <a class="button-info" href=href="#">подробнее</a>
-              <a class="button-buy" href=href="#">забронировать</a>
+              <a class="button-info" href="#">подробнее</a>
+              <a class="button-buy" href="#">забронировать</a>
             </div>
+              </div>
             <div class="hotel-rating">
                 <div class="stars-wrapper diablo">
                     <span class="visually-hidden">рейтинг две звезды</span>
