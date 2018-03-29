@@ -17,19 +17,14 @@ body {
 }
 
 .container {
-  width: 1280px;
-  margin: 0;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   padding: 0;
+
 }
 
-.white-back {
-  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
-  background-color:#ffffff;
-  width: 1200px;
-  margin: 0;
-  margin-left: 40px;
-  margin-right: 40px;
-}
 
 a {
   text-decoration: none;
@@ -850,8 +845,7 @@ background-image: url("../img/youtube-opacity.png");
   padding: 0;
   width: 317px;
   height: 2px;
-  background-color: #ffffff;
-  opacity: 0.3;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .bar {
@@ -861,7 +855,6 @@ background-image: url("../img/youtube-opacity.png");
   width: 248px;
   height: 2px;
   background-color: #ffffff;
-  opacity: 1;
 }
 
 .range-toggle {
@@ -878,15 +871,11 @@ background-image: url("../img/youtube-opacity.png");
   width: 22px;
   height: 24px;
   z-index: 1;
-
-
 }
 
 .range-toggle-max{
-  left:252px;
+  left:245px;
 }
-
-
 
 .hotel-type {
   margin-left: 115px;
@@ -901,7 +890,7 @@ background-image: url("../img/youtube-opacity.png");
 }
 
 .filter-ul li {
-  padding-bottom: 23px;
+  padding-bottom: 16px;
 }
 
 .filter-ul li:last-child {
@@ -913,41 +902,35 @@ background-image: url("../img/youtube-opacity.png");
 }
 
 .filter-option label {
-  position: relative;
-  padding-left: 40px;
   cursor: pointer;
+  text-align: left;
+  vertical-align: top;
+
+
 }
 
-.filter-option input[type="checkbox"] + .checkbox-indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
+
+.filter-option label::before {
+  content: "";
+  display: inline-block;
   width: 19px;
   height: 19px;
   border-radius: 15%;
   border: 2px solid #ffffff;
-
+  margin-right: 16px;
 }
 
-
-
-
-.filter-option input[type="checkbox"]:checked + .checkbox-indicator::after {
-  content: url("../img/checkbox-on2.svg");
-  background-image: с;
-  position: absolute;
+input[type="checkbox"]:checked + label::before {
+  content: "";
+  background-image: url("../img/checkbox-on2.svg");
+  background-repeat: no-repeat;
+  border: none;
   top: -2px;
   left: -2px;
-  background-color: inherit;
   width: 27px;
   height: 23px;
+  margin-right: 12px;
 }
-
-
-
-
-
-
 
 .search-result ul {
   background-color: #ffffff;
@@ -1102,7 +1085,7 @@ background-image: url("../img/youtube-opacity.png");
   display: inline-block;
 }
 
-.hotel-info h3:focus{
+.hotel-info h3:active{
   color: #000000;
   opacity: 0.3;
 }
