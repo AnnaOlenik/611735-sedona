@@ -397,7 +397,7 @@ a {
 .calendar {
   opacity: 0.3;
   position: absolute;
-  padding-top: 4px;
+  padding-top: 7px;
   left: 85%;
 }
 
@@ -489,11 +489,12 @@ a {
   box-sizing: border-box;
   height: 38px;
   width: 346px;
-  padding: 0 40px 0 6px;
+  padding: 0 40px 0 13px;
 }
 
 .adults-children-block input[type="text"] {
   font:inherit;
+  color: #000000;
   font-weight: 700px;
   box-sizing: border-box;
   width: 38px;
@@ -603,7 +604,6 @@ a {
   list-style: none;
   width: 151px;
   margin: 0;
-  margin-left: 14px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -639,10 +639,8 @@ a {
   justify-content: space-between;
   height: 42px;
   width: 197px;
-  margin: 0 0 0 0;
-  margin-top: 39px;
+  margin: 0;
   padding: 0;
-  padding-right: 101px;
 }
 
 .footer-copyright b {
@@ -978,25 +976,13 @@ input[type="checkbox"]:checked + label::before {
   justify-content: flex-start;
   margin: 0;
   margin-left: 30px;
-}
 
-.info-wrapper {
-  display: flex;
-  justify-content:flex-start;
-  text-align: left;
-  width: 262px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
-.button-info,
-.button-buy {
-  padding: 7px 17px;
-  vertical-align: middle;
 }
 
 .hotel-info h3 {
   display: inline-block;
+  margin: -4px 0 4px 0;;
+
 }
 
 .hotel-info h3:hover {
@@ -1007,23 +993,36 @@ input[type="checkbox"]:checked + label::before {
   color: #b2b2b2;
 }
 
+
+.info-wrapper {
+  padding-bottom: 15px;
+  font-weight: 300;
+}
+
 .info-wrapper b {
-  width: 116px;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  color:#333333;
+  display: inline-block;
+  vertical-align: top;
+  width: 111px;
 }
 
-.button-wrapper a {
-  width: 110px;
-  margin: 50px auto;
+.prise {
+  margin-right: 45px;
 }
 
-.button-wrapper .button-info  {
+.button-buy {
+  vertical-align: middle;
+}
+
+.button-wrapper .button-info
+  {
+  display: inline-block;
   font-weight: 700;
   color:#ffffff;
   background-color: #81b3d2;
+  width: 111px;
+  padding: 4px 0;
+  text-align: center;
+  vertical-align:bottom;
 }
 
 .button-wrapper .button-info:hover  {
@@ -1036,7 +1035,11 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .button-wrapper .button-buy  {
+  display: inline-block;
+  text-align: center;
   font-weight: 700;
+  width: 142px;
+  padding: 4px 0;
   color:#ffffff;
   background-color: #766357;
 }
