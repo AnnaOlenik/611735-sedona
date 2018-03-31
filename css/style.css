@@ -131,9 +131,9 @@ a {
 .city-info h1 {
   font-size: 21px;
   line-height: 26px;
-  width: 440px;
+  width: 500px;
   margin: 0;
-  padding:61px 0 28px 380px ;
+  padding:61px 0 28px 345px ;
 }
 
 .city-info p {
@@ -480,16 +480,21 @@ a {
 }
 
 .search-form input {
+  font:inherit;
   color: #000000;
+  font-weight: 700px;
   background-color: #f2f2f2;
   border: none;
   margin: 0;
   box-sizing: border-box;
+  height: 38px;
   width: 346px;
-  padding: 6px 40px 6px 6px;
+  padding: 0 40px 0 6px;
 }
 
 .adults-children-block input[type="text"] {
+  font:inherit;
+  font-weight: 700px;
   box-sizing: border-box;
   width: 38px;
   height: 38px;
@@ -682,13 +687,8 @@ a {
 .filter {
   display: flex;
   justify-content: flex-start;
-  padding:84px 74px 35px 72px;
+  padding:84px 74px 5px 72px;
   margin: 0;
-}
-
-.filter-ul {
-  list-style: none;
-  padding: 0;
 }
 
 .hotel-service legend,
@@ -697,6 +697,11 @@ a {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
+}
+
+.hotel-service legend,
+.hotel-type legend{
+  margin-bottom: 25px;
 }
 
 .container .search-hotels-button {
@@ -801,26 +806,31 @@ a {
 }
 
 .filter-ul {
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
+.filter-option label {
+  vertical-align: top;
+  height: 23px;
+  cursor: pointer;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+
 .filter-ul li {
-  padding-bottom: 16px;
+  margin-bottom: 25px;
+  padding-left:40px;
+  position: relative;
 }
 
 .filter-ul li:last-child {
   padding-bottom: 0;
 }
 
-.filter-ul li:first-child {
-  padding-top: 24px;
-}
-
-.filter-option label {
-  cursor: pointer;
-  text-align: left;
-  vertical-align: top;
-}
 
 .filter-option label::before {
   content: "";
@@ -830,6 +840,8 @@ a {
   border-radius: 15%;
   border: 2px solid #ffffff;
   margin-right: 16px;
+  position: absolute;
+  left:0px;
 }
 
 input[type="checkbox"]:checked + label::before {
@@ -837,8 +849,6 @@ input[type="checkbox"]:checked + label::before {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   border: none;
-  top: -2px;
-  left: -2px;
   width: 27px;
   height: 23px;
   margin-right: 12px;
@@ -925,7 +935,7 @@ input[type="checkbox"]:checked + label::before {
 
 .search-list li:nth-child(2) {
   margin-left: 49px;
-  margin-right: 40px;
+  margin-right: 7px;
 }
 
 .search-list li:nth-child(3),
