@@ -67,6 +67,9 @@ a {
   position: absolute;
   left:50%;
   transform: translateX(-50%);
+  background-image: url("../img/logo.png");
+  width:138px;
+  height: 70px;
 }
 
 .site-navigation {
@@ -169,7 +172,7 @@ a {
   top:0;
   left: 400px;
   width: 800px;
-  min-height: 265px;
+  min-height: 256px;
   background-image: url("../img/feature-1.jpg");
   background-position: left center;
 }
@@ -180,7 +183,7 @@ a {
   top:0;
   right:400px;
   width: 800px;
-  min-height: 265px;
+  min-height: 256px;
   background-image: url("../img/feature-2.jpg");
   background-position: left center;
 }
@@ -192,7 +195,7 @@ a {
 
 .reasons-item-1 {
   width: 280px;
-  padding: 46px 60px 64px;
+  padding: 46px 60px 60px;
 }
 
 .reasons-item-1 h4 {
@@ -216,7 +219,7 @@ a {
 
 .reasons-item-2 {
   width: 320px;
-  padding: 49px 40px 65px;
+  padding: 49px 40px 61px;
 }
 
 .reasons-item-2 h4 {
@@ -253,14 +256,19 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-  margin-top: 24px;
-  margin-bottom: 23px;
+  margin-top: 27px;
+  margin-bottom: 25px;
 }
 
 .advantages .advantages-item {
   width: 33%;
-  margin-top: 55px;
+  margin-top: 58px;
 }
+
+.advantages-item.food {
+  margin-top: 59px;
+}
+
 
 .advantages-item.appartments::before {
   content: url("../img/icon-1.png");
@@ -274,10 +282,11 @@ a {
 
 .advantages-item.food::before {
   content: url("../img/icon-3.png");
+  margin-top: 59px;
 }
 
 .advantages-item p {
-  margin-bottom: 86px;
+  margin-bottom: 80px;
   padding:0 55px;
 }
 
@@ -583,7 +592,7 @@ a {
   justify-content: space-between;
   margin-left: 132px;
   margin-right: 102px;
-  padding-top: 29px;
+  padding-top: 33px;
 }
 
 .sedona-visit {
@@ -601,6 +610,7 @@ a {
   list-style: none;
   width: 151px;
   margin: 0;
+  padding-left: 33px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -613,7 +623,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
 .social-button:hover {
     background-color: #669ec0;
@@ -647,7 +657,7 @@ a {
   line-height: 26px;
   margin: 0 auto;
   vertical-align: top;
-  padding: 5px 0;
+  padding: 10px 0 5px;
 }
 
 .copyright-logo path {
@@ -880,8 +890,7 @@ input[type="checkbox"]:checked + label::before {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  color: #000000;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dotted #81b3d2;
 }
 
