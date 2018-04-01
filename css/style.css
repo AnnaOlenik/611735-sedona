@@ -507,7 +507,7 @@ a {
 
 .search-form input:focus {
   background-color: #ffffff;
-  border: #e5e5e5;
+  border-color: #e5e5e5;
 }
 
 .search-form .button-minus,
