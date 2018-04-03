@@ -152,5 +152,60 @@
         </p>
       </div>
     </footer>
+    <script>
+      var link = document.querySelector(".button-link");
+      var popup = document.querySelector(".form-block");
+      var datein = popup.querySelector("[name=checkin]");
+      var dateout = popup.querySelector("[name=checkout]");
+
+      var form = document.querySelector("form");
+
+      var isStorageSupport = true;
+      var storage = "";
+
+      try {
+            storage = localStorage.getItem("login");
+          } catch (err) {
+            isStorageSupport = false;
+  }
+
+      link.addEventListener("click", function (evt) {
+        popup.classList.toggle( "modal-show" );
+
+        if (storage) {
+          checkin.value = storage;
+          checkout.value = storage;
+          dateout.focus();
+        } else {
+          datein.focus();
+    }
+  });
+
+      form.addEventListener("submit", function (evt) {
+        if (!datein.value || !dateout.value) {
+          evt.preventDefault();
+          console.log("Нужно ввести даты поездки");
+        } else {
+          if (isStorageSupport) {
+          localStorage.setItem("datein", checkin.value);
+          localStorage.setItem("dateout", checkout.value);
+        }
+      }
+   });
+
+     window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
+      }
+    }
+  });
+
+
+    </script>
+
+
+
   </body>
 </html>

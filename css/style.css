@@ -428,9 +428,15 @@ a {
   width: 568px;
 }
 
+.form-block {
+  display: none;
+}
+
 .modal-show {
   display: block;
+  animation: bounce 0.5s;
 }
+
 
 .search-form {
   background-color: #ffffff;
@@ -1113,4 +1119,20 @@ input[type="checkbox"]:checked + label::before {
   height: 17px;
   display: inline-block;
   background-color: #ffffff;
+}
+
+
+
+
+@keyframes bounce {
+
+0% {
+       opacity: 0;
+   }
+70% {
+      opacity: 0.5;
+  }
+100% {
+        opacity: 0.9;
+}
 }
